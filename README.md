@@ -1,2 +1,3 @@
 # tic-tac-toe
-Simple tic-tac-toe game in cpp
+Team Members: William McLaughlin (person 2) | Ian McKibben (person 1)
+This program runs a simple terminal version of tic-tac-toe, just run the program and select positions to play using 1-9.
