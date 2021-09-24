@@ -29,6 +29,7 @@ void DisplayBoard(std::vector<std::vector<int>> const &board) {
     }
 }
 
+
 // Places the marker string from positions 1 through 9
 void PlaceMarker(int position, std::string marker, std::vector<std::vector<int>> &board) {
     // Get X and Y from 1-9 position
@@ -37,6 +38,18 @@ void PlaceMarker(int position, std::string marker, std::vector<std::vector<int>>
 
     // Update position
     board[y][x] = (marker == "X") ? 1 : 2;
+}
+
+// Get a position to play from the player
+int GetPlayerChoice(){
+    std::cout << "Please select a position to play, 1 - 9: " << std::endl;
+
+    std::string input;
+    std::getline(std::cin, input);
+
+    int userin = std::stoi(input);
+
+    return userin;
 }
 
 int main() {
