@@ -55,5 +55,21 @@ int GetPlayerChoice(){
 int main() {
     // Initalizes my_board using copy constructor
     std::vector<std::vector<int>> my_board(CreateBoard());
+
+    // Turns left until board is full
+    int turns_left = 9;
+
+    // Subtract one from turns left and check if it is greater than 0
+    while (turns_left --> 0) {
+        // Display
+        DisplayBoard(my_board);
+
+        // Get choice
+        int choice = GetPlayerChoice();
+
+        // Place marker based on if turn is even or odd to alternate
+        PlaceMarker(choice, (turns_left % 2) ? "O" : "X", my_board);
+    }
+    // Display the board one last time
     DisplayBoard(my_board);
 }
