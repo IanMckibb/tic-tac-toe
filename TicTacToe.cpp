@@ -34,6 +34,8 @@ void PlaceMarker(int position, std::string marker, std::vector<std::vector<int>>
     // Get X and Y from 1-9 position
     int y = (position - 1) / board.size();
     int x = (position - 1) % 3;
+
+    // Update position
     board[y][x] = (marker == "X") ? 1 : 2;
 }
 
