@@ -31,6 +31,7 @@ void DisplayBoard(std::vector<std::vector<int>> const &board) {
 
 // Places the marker string from positions 1 through 9
 void PlaceMarker(int position, std::string marker, std::vector<std::vector<int>> &board) {
+    // Get X and Y from 1-9 position
     int y = (position - 1) / board.size();
     int x = (position - 1) % 3;
     board[y][x] = (marker == "X") ? 1 : 2;
